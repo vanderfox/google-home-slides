@@ -24,10 +24,10 @@ image::fig10.big.jpg[scaledheight=70%]
 [%step]
 * 80s
 * Much more powerful
-* heavy weight
-* started leveraging metaphors
-* coded for intiutive user actions
-* fit ALOT more data on the screen
+* Heavy weight
+* Started leveraging metaphors
+* Coded for intiutive user actions
+* Fit ALOT more data on the screen
 [%step]
 
 === Web interfaces
@@ -39,21 +39,31 @@ image::mosaic_6beta-4e90709-intro.jpg[]
 [%step]
 * 90s
 * Changed the way we organize information
-* mapped actions by number of clicks
+* Mapped actions by number of clicks
 [%step]
+
+=== Mobile interfaces
+
+image::mobile-dashboard-example_0.png[]
 
 === Mobile interfaces
 
 [%step]
 * 2000s
-* discovered more information visible isn't necessarily better
-* introduced gestures
+* Discovered more information visible isn't necessarily better
+* Introduced gestures
 [%step]
 
 === Voice interfaces
 
+image::google_home.jpg[]
+
+=== Voice interfaces
+
 [%step]
-* nowadays
-* speaking patterns are complex
+* Nowadays
+* Nothing to look at
+* Speaking patterns are complex
 * Many ways of saying the same thing
+* Reponses need to be descriptive
 [%step]

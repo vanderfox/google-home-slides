@@ -5,3 +5,11 @@
 * Released:  US 11/2016, UK 04/2017
 * Leverages Google Assistant
 [%step]
+
+== Features
+
+[%step]
+* Far field technology
+* Voice identification
+[%step]
+
