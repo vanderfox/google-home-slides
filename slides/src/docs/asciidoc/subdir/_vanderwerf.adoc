@@ -1,7 +1,4 @@
-== `whoami`
-
-[.fragment]
-**Fox**
+== `Ryan Vanderwerf`
 
 [%step]
 * Java developer since y2k

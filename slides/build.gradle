@@ -101,10 +101,7 @@ asciidoctor {
             'revealjs_transition': 'linear',
             'revealjs_history': 'true',
             'revealjs_slideNumber': 'true',
-            //'background-image':'plain-background-left.png',
             'background-size': 'contain',
-            //'title-slide-background-image':'framed-background-home-to-grails.png',
-            'title-slide-background-size':'contain',
             'github':'abc'
     options template_dirs: [new File(templateDir, 'templates/slim').absolutePath], github: [username: project.githubUsername,password: project.githubPassword]
 

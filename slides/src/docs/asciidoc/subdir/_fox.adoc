@@ -1,0 +1,11 @@
+== `Lee Fox`
+
+[%step]
+* Cloud Architect at Infor
+* Agile, DevOps, and ChatOps advocate
+* Past Technology Chair of Agile Austin
+* Alexa and Google Home Developer
+* Co-Author of Effective Gradle Implementation Video Series on Packt
+* Trained Innovation Games Facilitator
+* Amateur Chef
+

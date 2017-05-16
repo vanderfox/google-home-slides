@@ -1,6 +1,5 @@
 = Getting Groovy with Google Home
-Ryan Vanderwerf <vanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com
-2015-05-15
+Ryan Vanderwerf <vanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com>
 :source-highlighter: highlightjs
 :revnumber: {project-version}
 :example-caption!:
@@ -12,6 +11,7 @@ ifndef::sourcedir[:sourcedir: ../java]
 ifndef::demo[:demo: ../../../../demo/fields-demo]
 
 [.noborder]
+<<<<<<< HEAD
 image::google_home.jpg[scaledwidth=30%]
 
 Getting Groovy With Google Home
@@ -21,6 +21,8 @@ include::subdir/_whoami.adoc[]
 include::subdir/_oci.adoc[]
 
 
+include::subdir/_vanderwerf.adoc[]
+include::subdir/_fox.adoc[]
 == Session Agenda (1/2)
 
 [%step]
