@@ -24,9 +24,11 @@ include::subdir/_googlehome.adoc[]
 
 include::subdir/_evolution.adoc[]
 
-include::subdir/_actions[]
+include::subdir/_actions.adoc[]
 
-include::subdir/_building_actions_grails[]
+include::subdir/_building_actions_grails.adoc[]
+
+include::subdir/_building_actions_with_apiai.adoc[]
 
 include::subdir/_summary.adoc[]
 
