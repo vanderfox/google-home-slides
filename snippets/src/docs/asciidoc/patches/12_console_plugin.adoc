@@ -1,0 +1,9 @@
+=== Commit: Console plugin
+
+==== `build.gradle` 
+
+[source.added]
+----
+runtime 'org.grails.plugins:grails-console:2.0.8'
+----
+

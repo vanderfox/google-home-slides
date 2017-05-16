@@ -1,0 +1,11 @@
+[background-image="takeabow.gif",background-size="cover"]
+== Thank You.
+
+[background-image="framed-background-home-to-grails.png"]
+=== Thank You.
+
+[.fa]
+* icon:user[] Søren Berg Glasius
+* icon:envelope[] soeren@glasius.dk
+* icon:twitter[] http://twitter.com/sbglasius
+* icon:github[] http://github.com/sbglasius

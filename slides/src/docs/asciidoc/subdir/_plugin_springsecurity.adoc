@@ -1,0 +1,49 @@
+ifndef::imagesdir[:imagesdir: ../images]
+[background-image="framed-background-left-bottom.png"]
+== Spring Security Core Plugin
+
+The Spring Security plugin simplifies the integration of Spring Security into Grails applications. The plugin provides sensible defaults with many configuration options for customization.
+
+https://github.com/grails-plugins/grails-spring-security-core
+
+[background-image="framed-background-left-bottom.png"]
+=== Spring Security Core Plugin
+[%step]
+* Highly configurable
+* Provides good starting point for securing your apps
+* Fine grained access control
+
+[background-image="framed-background-left-bottom.png"]
+=== Spring Security Core Plugin
+[.fragment]
+* A whooping 18 sub-plugins
+** Spring-Security-LDAP
+** Spring-Security-CAS
+** Spring-Security-ACL
+** Spring-Security-UI
+** Spring-Security-REST
+** ... and many many more
+
+=== Spring Security Core Plugin
+Easy to setup:
+[source]
+----
+
+grails s2-quickstart tour.de.plugin.demo User Role
+
+----
+
+[background-image="framed-background-left-bottom.png"]
+=== Spring Security Core Plugin
+Kudos to:
+
+* Burt Beckwith github:burtbeckwith[]
+* Omasiri github:Omasiri[]
+* Lari Hotari github:lhotari[]
+* Beverley Talbott github:btalbott[]
+* ... and many more!
+
+[background-image="framed-background-home-to-grails.png"]
+=== Spring Security Core Plugin
+Demo
+

@@ -1,0 +1,23 @@
+[background-image="framed-background-left-bottom.png"]
+== External Config Plugin
+
+Mimics the Grails 2 way of handling external configurations defined in `grails.config.locations`.
+
+https://github.com/sbglasius/external-config
+
+[background-image="framed-background-left-bottom.png"]
+=== External Config Plugin
+[.fragment]
+* Easy migration of external configs from Grails 2
+* Supports `.yml`, `.groovy` and `.properties` files
+
+[background-image="framed-background-left-bottom.png"]
+=== External Config Plugin
+Created by
+
+Yours truly
+
+[background-image="framed-background-home-to-grails.png"]
+=== External Config Plugin
+Demo
+

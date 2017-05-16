@@ -1,0 +1,9 @@
+=== Commit: Asset pipeline
+
+==== `grails-app/views/layouts/main.gsp` 
+
+[source.added]
+----
+<asset:deferredScripts/>
+----
+

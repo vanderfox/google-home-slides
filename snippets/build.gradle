@@ -1,0 +1,24 @@
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+}
+
+apply plugin: 'groovy'
+apply plugin: 'org.asciidoctor.convert'
+
+version = '1.0.0-SNAPSHOT'
+
+asciidoctorj {
+    version = '1.5.4'
+}
+
+asciidoctor {
+    attributes 'sourcedir': project.sourceSets.main.java.srcDirs[0],
+            'source-highlighter': 'highlightjs',
+            'imagesdir': 'images',
+            'toc': 'left',
+            'icons': 'font',
+            'setanchors': '',
+            'idprefix': '',
+            'idseparator': '-',
+            'docinfo1': ''
+}

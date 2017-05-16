@@ -1,0 +1,94 @@
+=== Commit: Cache plugin
+
+==== `grails-app/controllers/tour/DemoController.groovy` 
+
+[source.added]
+----
+package tour
+import org.grails.core.util.StopWatch
+class DemoController {
+    def externalService
+    static defaultAction = "search"
+    def search(String query) {
+        if (request.method == 'POST') {
+            StopWatch stopwatch = new StopWatch()
+            stopwatch.start()
+            def result = externalService.slowQuery(query)
+            stopwatch.stop()
+            flash.message = "Result: ${result} (in ${stopwatch.lastTaskTimeMillis} ms)"
+        }
+        [query: query]
+    }
+    def evict(String query) {
+        externalService.evictEntry(query)
+        flash.message = "Evicted: $query"
+        redirect(action: 'search', params: [query: query])
+    }
+    def evictAll() {
+        externalService.evictAll()
+        flash.message = 'Evicted all'
+        redirect(action: 'search')
+    }
+}
+----
+
+==== `grails-app/services/tour/de/plugin/demo/ExternalService.groovy` 
+
+[source.added]
+----
+package tour.de.plugin.demo
+import grails.plugin.cache.CacheEvict
+import grails.plugin.cache.Cacheable
+class ExternalService {
+    @Cacheable(value = 'externalData', key = '#query')
+    def slowQuery(String query) {
+        println("Query for $query")
+        sleep(1000)
+        return "Slowly queried for: $query"
+    }
+    @CacheEvict(value = 'externalData', key = '#query')
+    void evictEntry(String query) {
+        println("Evicted $query")
+    }
+    @CacheEvict(value = 'externalData', allEntries = true)
+    void evictAll() {
+        println("Evicted all")
+    }
+}
+----
+
+==== `grails-app/views/demo/search.gsp` 
+
+[source.added]
+----
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <g:form action="search" method="POST">
+        <fieldset>
+            <g:if test="${flash.message}">
+                <div class="alert alert-info">
+                    ${flash.message}
+                </div>
+            </g:if>
+            <div class="form-group">
+                <label for="query" class="control-label">Query:</label>
+                <g:textField class="form-control" name="query" value="${query}"/>
+            </div>
+                <div>
+                    <g:submitButton name="submit" value="Query"/>
+                    <g:actionSubmit action="evict" name="evict" value="Evict"/>
+                    <g:link action="evictAll">Evict all</g:link>
+                </div>
+        </fieldset>
+    </g:form>
+</div>
+</body>
+</html>
+----
+

@@ -1,0 +1,27 @@
+[background-image="framed-background-left-bottom.png"]
+== Fields Plugin
+
+Attempts to provide a configurable way to render forms with appropriate inputs for different properties without having to copy and paste lots of boilerplate code.
+
+https://github.com/grails-fields-plugin/grails-fields
+
+[background-image="framed-background-left-bottom.png"]
+=== Fields Plugin
+[.fragment]
+* Used by the Grails Scaffolding Plugin
+* DRY views
+
+[background-image="framed-background-left-bottom.png"]
+=== Fields Plugin
+Kudos to
+
+* Rob Fletcher github:robfletcher[]
+* Martín Caballero github:mpccolorado[]
+* Peter Ledbrook github:pledbrook[]
+* Lari Hotari github:lhotari[]
+* ... and many others
+
+[background-image="framed-background-home-to-grails.png"]
+=== Fields Plugin
+Demo
+

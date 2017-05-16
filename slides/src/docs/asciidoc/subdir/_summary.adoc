@@ -1,0 +1,17 @@
+== Summary
+What plugins gives you:
+[%step]
+* Lots of already coded functionality
+* Often well tested code
+* Large supporting community
+* Great way to structure your code
+
+=== What can you do
+[%step]
+* Provide feedback to plugin authors
+[%step]
+** Feature requests
+** Bug reports
+** Thanks and gratitude!
+[%step]
+* Write and submit your own plugins!

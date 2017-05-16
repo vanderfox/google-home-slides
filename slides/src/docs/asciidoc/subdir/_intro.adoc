@@ -1,0 +1,17 @@
+== Why plugins?
+
+[%step]
+* Provides a multitude of extension points
+* Well structured applications
+* Community driven
+* No need to re-invent the wheel
+
+=== Where can I find them?
+
+[%step]
+* http://plugins.grails.org/
+* https://bintray.com/grails/plugins
+
+=== Important
+
+Grails 1.x and 2.x plugins does NOT work in Grails 3!

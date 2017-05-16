@@ -1,0 +1,41 @@
+tt6ggggggggggggggggggggggggifndef::imagesdir[:imagesdir: ../images]
+[background-image="framed-background-left-bottom.png"]
+== Schwartz Plugin
+
+The Schwartz plugin integrates the Quartz Enterprise Job Scheduler with Grails, making it easy to schedule and manage recurring and ad-hoc jobs for asynchronous and synchronous processing.
+
+https://github.com/agileorbit/grails-schwartz/
+
+[background-image="framed-background-left-bottom.png"]
+=== Schwartz Plugin
+[.fragment]
+* Nice wrapper to the Quartz Java Library
+* Supports clustering via. JDBC
+* Very fine grained control over jobs
+* Could replace the Quartz Plugin
+
+=== Schwartz Plugin
+Easy to create new jobs:
+[source]
+----
+
+grails create-job tour.de.plugin.demo.Update
+
+----
+
+=== Schwartz Plugin
+image::schwartz.jpg[scaledwidth=95%]
+
+
+[background-image="framed-background-left-bottom.png"]
+=== Schwartz Plugin
+Kudos to:
+
+* Bobby Warner github:bobbywarner[]
+* Aaron J. Zirbes github:aaronzirbes[]
+* Burt Beckwith github:burtbeckwith[]
+
+[background-image="framed-background-home-to-grails.png"]
+=== Schwartz Plugin
+Demo
+

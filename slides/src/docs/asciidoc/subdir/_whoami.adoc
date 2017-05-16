@@ -1,0 +1,13 @@
+[background-image="goldengate.jpg"]
+== `whoami`
+
+[.fragment]
+**Søren Berg Glasius**
+
+[%step]
+* Java developer since y2k
+* Groovy & Grails developer since y2k+9
+* OCI Grails Team Member
+* GR8Conf co-founder and organizer
+* Nerd By Nature
+

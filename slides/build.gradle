@@ -1,0 +1,133 @@
+buildscript {
+    dependencies {
+        classpath 'commons-httpclient:commons-httpclient:3.1'
+
+    }
+}
+
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+    id 'com.github.jruby-gradle.base' version '1.2.1'
+    id 'org.kordamp.gradle.livereload' version '0.2.1'
+    id "org.ysb33r.vfs" version "1.0"
+}
+
+apply plugin: 'com.github.jruby-gradle.base'
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'org.kordamp.gradle.livereload'
+
+version = '1.0.0-SNAPSHOT'
+
+ext {
+    revealjsVersion = '3.5.0'
+    asciidoctorBackendVersion = 'master'
+    downloadDir = new File(buildDir, 'download')
+    templateDir = new File(downloadDir, 'templates')
+    revealjsDir = new File(downloadDir, 'reveal.js')
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.asciidoctor:asciidoctorj:1.5.0'
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+
+    compile 'io.github.binout.asciidoctor:asciidoctor-extensions:0.3'
+
+    gems 'rubygems:slim:3.0.6'
+    gems 'rubygems:thread_safe:0.3.5'
+
+//    asciidoctor 'dk.glasius.asciidoc:asciidoctorj-github:1.0.3-SNAPSHOT'
+}
+
+task createDist(type: Zip, dependsOn: asciidoctor) {
+    from fileTree("${asciidoctor.outputDir}/revealjs")
+    baseName = rootProject.name
+    into rootProject.name
+}
+
+
+task download {
+    description "Download extra revealjs resources"
+    outputs.dir templateDir
+    outputs.dir revealjsDir
+    
+    doLast {
+        mkdir downloadDir
+        vfs {
+            cp "zip:https://github.com/asciidoctor/asciidoctor-reveal.js/archive/${asciidoctorBackendVersion}.zip!asciidoctor-reveal.js-${asciidoctorBackendVersion}",
+                    templateDir, recursive: true, overwrite: true
+            cp "zip:https://github.com/hakimel/reveal.js/archive/${revealjsVersion}.zip!reveal.js-${revealjsVersion}",
+                    revealjsDir, recursive: true, overwrite: true
+        }
+    }
+}
+
+asciidoctorj {
+    version = '1.5.4'
+}
+
+asciidoctor {
+    dependsOn jrubyPrepare, download
+    sources {
+        include 'index.adoc'
+    }
+    resources {
+        from(sourceDir) {
+            include 'images/**'
+        }
+        from(downloadDir) {
+            include 'reveal.js/**'
+        }
+    }
+    backends 'revealjs'
+    attributes  \
+            'sourcedir': project.sourceSets.main.java.srcDirs[0],
+            'source-highlighter': 'highlightjs',
+            'imagesdir': './images',
+            'grails_demo':'../../demo/fields-demo',
+            'toc': 'left',
+            'icons': 'font',
+            'setanchors': '',
+            'idprefix': 'slide-',
+            'idseparator': '-',
+            'docinfo1': '',
+            'revealjs_theme': 'black',
+            'revealjs_transition': 'linear',
+            'revealjs_history': 'true',
+            'revealjs_slideNumber': 'true',
+            'background-image':'plain-background-left.png',
+            'background-size': 'contain',
+            'title-slide-background-image':'framed-background-home-to-grails.png',
+            'title-slide-background-size':'contain',
+            'github':'abc'
+    options template_dirs: [new File(templateDir, 'templates/slim').absolutePath], github: [username: project.githubUsername,password: project.githubPassword]
+
+    // Here we can add the code for extensions we write.
+    extensions {
+
+        // Implementation for inline macro to replace
+        // issue:<issue-id>[] with a link to the issue.
+        inlinemacro(name: "github") {
+            parent, target, attributes ->
+
+                options = [
+                        "type"  : ":link",
+                        "target": "https://github.com/${target}".toString()
+                ]
+
+                // Create the link to the issue.
+                createInline(parent, "anchor", "($target)", attributes, options).render()
+        }
+
+    }
+}
+
+liveReload {
+    docRoot asciidoctor.outputDir.canonicalPath
+}

@@ -1,0 +1,72 @@
+=== Commit: I18n Enum Plugin
+
+==== `build.gradle` 
+
+[source.added]
+----
+maven { url "http://dl.bintray.com/sbglasius/plugins" }
+compile 'org.grails.plugins:i18n-enums:2.0.2'
+----
+
+==== `grails-app/conf/application.yml` 
+
+[source.removed]
+.grails-app/conf/application.yml (remove lines)
+----
+- ~/.grails/demo-secrets.yml
+----
+
+[source.added]
+----
+- ~/.grails/demo-secrets.yml
+---
+grails:
+    plugin:
+        i18nEnum:
+            postfix: label
+            shortName: true
+            defaultNameCase: ALL_CAPS
+----
+
+==== `grails-app/controllers/tour/Speciality.groovy` 
+
+[source.added]
+----
+package tour
+import grails.plugins.i18nEnums.traits.I18nEnumTrait
+enum Speciality implements I18nEnumTrait {
+    SPRINTER,
+    MOUNTAIN,
+    ALL_AROUND
+}
+----
+
+==== `grails-app/domain/tour/Rider.groovy` 
+
+[source.added]
+----
+Speciality speciality
+    speciality nullable: true
+----
+
+==== `grails-app/i18n/messages.properties` 
+
+[source.removed]
+.grails-app/i18n/messages.properties (remove lines)
+----
+rider.weight.label = Weight in kg
+----
+
+[source.added]
+----
+rider.weight.label = Weight in kg
+Speciality.MOUNTAIN.label=Mountain rider
+----
+
+==== `grails-app/views/_fields/rider/speciality/_displayWidget.gsp` 
+
+[source.added]
+----
+<p class="form-control-static"><g:message message="${value}"/></p>
+----
+

@@ -1,0 +1,41 @@
+=== Commit: External config plugin
+
+==== `build.gradle` 
+
+[source.added]
+----
+compile 'org.grails.plugins:external-config:1.0.0'
+----
+
+==== `grails-app/conf/application.yml` 
+
+[source.removed]
+.grails-app/conf/application.yml (remove lines)
+----
+disableLookupCache: true
+----
+
+[source.added]
+----
+disableLookupCache: true
+---
+grails:
+  config:
+     locations:
+      - ~/.grails/external-config.groovy
+----
+
+==== `grails-app/init/tour/Application.groovy` 
+
+[source.removed]
+.grails-app/init/tour/Application.groovy (remove lines)
+----
+class Application extends GrailsAutoConfiguration {
+----
+
+[source.added]
+----
+import grails.plugin.externalconfig.ExternalConfig
+class Application extends GrailsAutoConfiguration implements ExternalConfig {
+----
+

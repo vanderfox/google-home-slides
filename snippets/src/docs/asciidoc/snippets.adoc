@@ -1,0 +1,49 @@
+= Snippets
+
+http://www.letour.fr/le-tour/2014/us/teams.html
+
+== Initial steps
+Create project,
+
+Go through project with `Team`, `Rider`, `Controllers`, `Bootstrap`
+
+== Fields Plugin
+include::patches/2_fields_plugin.adoc[]
+
+== Cache Plugin
+include::patches/3_cache_plugin.adoc[]
+
+== Client Dependencies
+include::patches/4_added_client-dependencies_gradle_plugin.adoc[]
+
+== Asset Pipeline Plugin
+include::patches/5_asset_pipeline.adoc[]
+
+== Less Asset Pipeline Plugin
+include::patches/6_less_asset_pipeline_plugin.adoc[]
+
+== External Config Plugin
+include::patches/7_external_config_plugin.adoc[]
+
+== Mail Plugin
+include::patches/8_mail_plugin.adoc[]
+
+== Green Mail Plugin
+include::patches/9_green_mail_plugin.adoc[]
+
+== SendGrid Plugin
+include::patches/10_sendgrid_plugin.adoc[]
+
+== I18n Enums Plugin
+include::patches/11_i18n_enum_plugin.adoc[]
+
+== Console Plugin
+include::patches/12_console_plugin.adoc[]
+
+== Schwartz Plugin
+include::patches/13_schwartz_plugin.adoc[]
+
+== Spring Security Core Plugin
+include::patches/14_spring_security_core_plugin.adoc[]
+
+

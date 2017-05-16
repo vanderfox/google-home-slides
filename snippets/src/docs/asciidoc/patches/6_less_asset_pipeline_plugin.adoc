@@ -1,0 +1,40 @@
+=== Commit: Less Asset Pipeline Plugin
+
+==== `build.gradle` 
+
+[source.removed]
+.build.gradle (remove lines)
+----
+'bootstrap'('3.3.6')
+----
+
+[source.added]
+----
+classpath 'com.bertramlabs.plugins:less-asset-pipeline:2.11.6'
+assets "com.bertramlabs.plugins:less-asset-pipeline:2.11.6"
+excludes = ['bootstrap-less/**']
+    'bootstrap'('3.3.6') {
+        exclude 'fonts/**', 'css/**'
+    }
+    'bootstrap-less'('3.3.4') {
+        exclude 'js/**', '/*.*'
+    }
+----
+
+==== `grails-app/assets/stylesheets/application.css` 
+
+Delete file!
+
+==== `grails-app/assets/stylesheets/application.css.less` 
+
+[source.added]
+----
+@import (less) './bootstrap-less/less/bootstrap.less';
+@import (css,inline) './grails.css';
+@import (css,inline) './main.css';
+@import (css,inline) './mobile.css';
+@icon-font-path: "bootstrap-less/fonts/";
+----
+
+==== `grails-app/views/layouts/main.gsp` 
+

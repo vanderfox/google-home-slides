@@ -1,0 +1,52 @@
+[background-image="framed-background-left-bottom.png"]
+== Grails SendGrid Plugin
+
+The Grails SendGrid plugin allows you to use the services offered by SendGrid to send email from your application.
+
+https://github.com/desirable-objects/grails-sendgrid
+
+[background-image="framed-background-left-bottom.png"]
+=== Grails SendGrid Plugin
+[.fragment]
+* Alternative to the Mail Plugin
+* Good if you do not have a SMTP server
+* Nice DSL to send email
+
+
+=== Grails SendGrid Plugin
+[source, groovy]
+----
+sendGridService.sendMail {
+     from 'antony@example.com'
+     to 'aiten@example.net'
+     to 'wirah@example.org'
+     bcc 'yourbcc@example.com'
+     subject 'This is the subject line'
+     body 'This is our message body'
+}
+----
+
+=== Grails SendGrid Plugin
+Caveats:
+[.fragment]
+* Uses the SendGrid v2 API
+* Not using an API token but username/password
+
+[.fragment]
+Alternatively use the SendGrid Java library directly:
+[.fragment]
+https://github.com/sendgrid/sendgrid-java
+
+[background-image="framed-background-left-bottom.png"]
+=== Grails SendGrid Plugin
+Kudos to:
+
+* Antony Jones github:antony[]
+* Roberto Pérez Alcolea github:rpalcolea[]
+* ... and many more
+
+
+[background-image="framed-background-home-to-grails.png"]
+=== Grails SendGrid Plugin
+Demo
+

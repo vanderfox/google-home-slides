@@ -1,0 +1,151 @@
+=== Commit: Fields plugin
+
+==== `grails-app/conf/application.yml` 
+
+[source.removed]
+.grails-app/conf/application.yml (remove lines)
+----
+banner-mode: "off"
+----
+
+[source.added]
+----
+banner-mode: "on"
+---
+grails:
+  plugin:
+    fields:
+      disableLookupCache: true
+----
+
+==== `grails-app/domain/tour/Team.groovy` 
+
+[source.removed]
+.grails-app/domain/tour/Team.groovy (remove lines)
+----
+description nullable: true
+----
+
+[source.added]
+----
+description nullable: true, widget: 'textArea'
+----
+
+==== `grails-app/i18n/messages.properties` 
+
+[source.added]
+----
+rider.weight.label = Weight in kg
+----
+
+==== `grails-app/views/_fields/default/_displayWidget.gsp` 
+
+[source.added]
+----
+<p class="form-control-static">${value}</p>
+----
+
+==== `grails-app/views/_fields/default/_displayWrapper.gsp` 
+
+[source.added]
+----
+<div class="form-group clearfix">
+    <label class="control-label">${label}</label>
+    <p class="form-control-static">${widget}</p>
+</div>
+----
+
+==== `grails-app/views/_fields/default/_wrapper.gsp` 
+
+[source.added]
+----
+<div class="form-group ${invalid ? 'has-error' : ''}">
+    <label for="${field}" class="control-label">${label}</label>
+    ${raw(widget)}
+    <g:if test="${errors}">
+        <g:each in="${errors}" var="error">
+            <span class="help-block"><g:message error="${error}"/></span>
+        </g:each>
+    </g:if>
+</div>
+----
+
+==== `grails-app/views/_fields/integer/_widget.gsp` 
+
+[source.added]
+----
+<g:field type="number" name="${property}" value="${value}" class="form-control" />
+----
+
+==== `grails-app/views/_fields/rider/born/_displayWidget.gsp` 
+
+[source.added]
+----
+<p class="form-control-static"><g:formatDate date="${value}" format="yyyy-MM-dd"/></p>
+----
+
+==== `grails-app/views/_fields/rider/image/_displayWidget.gsp` 
+
+[source.added]
+----
+<p class="form-control-static"><img src="${value}"/></p>
+----
+
+==== `grails-app/views/_fields/string/_widget.gsp` 
+
+[source.added]
+----
+<g:textField name="${property}" value="${value}" class="form-control" />
+----
+
+==== `grails-app/views/_fields/textArea/_widget.gsp` 
+
+[source.added]
+----
+<g:textArea name="${property}" class="form-control">${value}</g:textArea>
+----
+
+==== `grails-app/views/templates/_fields/_list.gsp` 
+
+[source.added]
+----
+<fieldset>
+    <g:each in="${domainClass.persistentProperties}" var="p">
+        <div class="form-group">
+            <label id="${p.name}-label" class="col-sm-2 control-label"><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}"/></label>
+            ${body(p)}
+        </div>
+    </g:each>
+</fieldset>
+----
+
+==== `grails-app/views/templates/_fields/_table.gsp` 
+
+[source.added]
+----
+<table class="table table-bordered table-hover">
+    <thead>
+         <tr>
+            <g:each in="${domainProperties}" var="p" status="i">
+                <g:set var="propTitle">${domainClass.propertyName}.${p.name}.label</g:set>
+                <g:sortableColumn property="${p.name}" title="${message(code: propTitle, default: p.naturalName)}" />
+            </g:each>
+        </tr>
+    </thead>
+    <tbody>
+        <g:each in="${collection}" var="bean" status="i">
+            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                <g:each in="${domainProperties}" var="p" status="j">
+                    <g:if test="${j==0}">
+                        <td><g:link method="GET" resource="${bean}"><f:displayWidget bean="${bean}" property="${p.name}" displayStyle="${displayStyle?:'table'}" /></g:link></td>
+                    </g:if>
+                    <g:else>
+                        <td><f:displayWidget bean="${bean}" property="${p.name}"  displayStyle="${displayStyle?:'table'}" /></td>
+                    </g:else>
+                </g:each>
+            </tr>
+        </g:each>
+    </tbody>
+</table>
+----
+

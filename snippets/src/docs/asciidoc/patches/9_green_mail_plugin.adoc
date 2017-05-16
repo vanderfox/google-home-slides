@@ -1,0 +1,35 @@
+=== Commit: Green Mail Plugin
+
+==== `build.gradle` 
+
+[source.added]
+----
+compile 'org.grails.plugins:greenmail:2.0.0.RC2'
+----
+
+==== `grails-app/conf/application.groovy` 
+
+[source.removed]
+.grails-app/conf/application.groovy (remove lines)
+----
+host = "smtp.gmail.com"
+port = 465
+username = "demo1@gr8conf.org"
+props = ["mail.smtp.auth"                  : "true",
+         "mail.smtp.socketFactory.port"    : "465",
+         "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
+         "mail.smtp.socketFactory.fallback": "false"]
+----
+
+[source.added]
+----
+port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
+//        host = "smtp.gmail.com"
+//        port = 465
+//        username = "demo1@gr8conf.org"
+//        props = ["mail.smtp.auth"                  : "true",
+//                 "mail.smtp.socketFactory.port"    : "465",
+//                 "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
+//                 "mail.smtp.socketFactory.fallback": "false"]
+----
+

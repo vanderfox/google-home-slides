@@ -1,0 +1,41 @@
+[background-image="framed-background-left-bottom.png"]
+== Asset Pipeline Grails Plugin
+
+The Asset-Pipeline is a plugin used for managing and processing static assets in JVM applications.
+
+https://github.com/bertramdev/grails-asset-pipeline/tree/grails3
+
+[background-image="framed-background-left-bottom.png"]
+=== Asset Pipeline Grails Plugin
+[%step]
+* Asset Bundling
+* Wide variety of extension modules:
+** LESS
+** Handlebars
+** CoffeeScript
+** SASS and many others
+
+[background-image="framed-background-left-bottom.png"]
+=== Asset Pipeline Grails Plugin
+[%step]
+* Minifications of JS and CSS resources
+* GZIP File Generation
+* Headers and naming for better client caching
+
+[background-image="framed-background-left-bottom.png"]
+=== Asset Pipeline Grails Plugin
+
+Kudos to:
+
+//github::contributors[owner:bertramdev, name:grails-asset-pipeline]
+
+* David Estes github:davydotcom[]
+* Ross Goldberg github:rgoldberg[]
+* Bobby Warner github:bobbywarner[]
+* Burt Beckwith github:burtbeckwith[]
+* ...and many others (31)
+
+[background-image="framed-background-home-to-grails.png"]
+=== Asset Pipeline Grails Plugin
+Demo
+

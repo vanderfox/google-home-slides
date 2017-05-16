@@ -1,0 +1,217 @@
+=== Commit: Spring Security Core plugin
+
+==== `build.gradle` 
+
+[source.added]
+----
+compile 'org.grails.plugins:spring-security-core:3.1.1'
+----
+
+==== `grails-app/conf/application.groovy` 
+
+[source.removed]
+.grails-app/conf/application.groovy (remove lines)
+----
+}
+----
+
+[source.added]
+----
+}
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'tour.de.plugin.demo.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'tour.de.plugin.demo.UserRole'
+grails.plugin.springsecurity.authority.className = 'tour.de.plugin.demo.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	[pattern: '/',               access: ['permitAll']],
+	[pattern: '/error',          access: ['permitAll']],
+	[pattern: '/index',          access: ['permitAll']],
+	[pattern: '/index.gsp',      access: ['permitAll']],
+	[pattern: '/shutdown',       access: ['permitAll']],
+	[pattern: '/assets/**',      access: ['permitAll']],
+	[pattern: '/**/js/**',       access: ['permitAll']],
+	[pattern: '/**/css/**',      access: ['permitAll']],
+	[pattern: '/**/images/**',   access: ['permitAll']],
+	[pattern: '/**/favicon.ico', access: ['permitAll']]
+]
+grails.plugin.springsecurity.filterChain.chainMap = [
+	[pattern: '/assets/**',      filters: 'none'],
+	[pattern: '/**/js/**',       filters: 'none'],
+	[pattern: '/**/css/**',      filters: 'none'],
+	[pattern: '/**/images/**',   filters: 'none'],
+	[pattern: '/**/favicon.ico', filters: 'none'],
+	[pattern: '/**',             filters: 'JOINED_FILTERS']
+]
+----
+
+==== `grails-app/controllers/tour/DemoController.groovy` 
+
+[source.added]
+----
+import grails.plugin.springsecurity.annotation.Secured
+@Secured(['ROLE_ADMIN'])
+----
+
+==== `grails-app/domain/tour/de/plugin/demo/Role.groovy` 
+
+[source.added]
+----
+package tour.de.plugin.demo
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
+@EqualsAndHashCode(includes='authority')
+@ToString(includes='authority', includeNames=true, includePackage=false)
+class Role implements Serializable {
+	private static final long serialVersionUID = 1
+	String authority
+	static constraints = {
+		authority blank: false, unique: true
+	}
+	static mapping = {
+		cache true
+	}
+}
+----
+
+==== `grails-app/domain/tour/de/plugin/demo/User.groovy` 
+
+[source.added]
+----
+package tour.de.plugin.demo
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
+@EqualsAndHashCode(includes='username')
+@ToString(includes='username', includeNames=true, includePackage=false)
+class User implements Serializable {
+	private static final long serialVersionUID = 1
+	transient springSecurityService
+	String username
+	String password
+	boolean enabled = true
+	boolean accountExpired
+	boolean accountLocked
+	boolean passwordExpired
+	Set<Role> getAuthorities() {
+		UserRole.findAllByUser(this)*.role
+	}
+	def beforeInsert() {
+		encodePassword()
+	}
+	def beforeUpdate() {
+		if (isDirty('password')) {
+			encodePassword()
+		}
+	}
+	protected void encodePassword() {
+		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+	}
+	static transients = ['springSecurityService']
+	static constraints = {
+		password blank: false, password: true
+		username blank: false, unique: true
+	}
+	static mapping = {
+		password column: '`password`'
+	}
+}
+----
+
+==== `grails-app/domain/tour/de/plugin/demo/UserRole.groovy` 
+
+[source.added]
+----
+package tour.de.plugin.demo
+import grails.gorm.DetachedCriteria
+import groovy.transform.ToString
+import org.apache.commons.lang.builder.HashCodeBuilder
+@ToString(cache=true, includeNames=true, includePackage=false)
+class UserRole implements Serializable {
+	private static final long serialVersionUID = 1
+	User user
+	Role role
+	@Override
+	boolean equals(other) {
+		if (other instanceof UserRole) {
+			other.userId == user?.id && other.roleId == role?.id
+		}
+	}
+	@Override
+	int hashCode() {
+		def builder = new HashCodeBuilder()
+		if (user) builder.append(user.id)
+		if (role) builder.append(role.id)
+		builder.toHashCode()
+	}
+	static UserRole get(long userId, long roleId) {
+		criteriaFor(userId, roleId).get()
+	}
+	static boolean exists(long userId, long roleId) {
+		criteriaFor(userId, roleId).count()
+	}
+	private static DetachedCriteria criteriaFor(long userId, long roleId) {
+		UserRole.where {
+			user == User.load(userId) &&
+			role == Role.load(roleId)
+		}
+	}
+	static UserRole create(User user, Role role) {
+		def instance = new UserRole(user: user, role: role)
+		instance.save()
+		instance
+	}
+	static boolean remove(User u, Role r) {
+		if (u != null && r != null) {
+			UserRole.where { user == u && role == r }.deleteAll()
+		}
+	}
+	static int removeAll(User u) {
+		u == null ? 0 : UserRole.where { user == u }.deleteAll()
+	}
+	static int removeAll(Role r) {
+		r == null ? 0 : UserRole.where { role == r }.deleteAll()
+	}
+	static constraints = {
+		role validator: { Role r, UserRole ur ->
+			if (ur.user?.id) {
+				UserRole.withNewSession {
+					if (UserRole.exists(ur.user.id, r.id)) {
+						return ['userRole.exists']
+					}
+				}
+			}
+		}
+	}
+	static mapping = {
+		id composite: ['user', 'role']
+		version false
+	}
+}
+----
+
+==== `grails-app/init/tour/BootStrap.groovy` 
+
+[source.added]
+----
+import tour.de.plugin.demo.Role
+import tour.de.plugin.demo.User
+import tour.de.plugin.demo.UserRole
+        if(!User.count() && !Role.count()) {
+            initUsers()
+        }
+    void initUsers() {
+        def adminRole = new Role(authority: 'ROLE_ADMIN').save()
+        def userRole = new Role(authority: 'ROLE_USER').save()
+        def adminUser = new User(username: 'admin', password: 'password').save()
+        def regularUser = new User(username: 'user', password: 'password').save()
+        UserRole.create adminUser, adminRole
+        UserRole.create regularUser, userRole
+        UserRole.withSession {
+            it.flush()
+            it.clear()
+        }
+        assert User.count() == 2
+        assert Role.count() == 2
+        assert UserRole.count() == 2
+    }
+----
+

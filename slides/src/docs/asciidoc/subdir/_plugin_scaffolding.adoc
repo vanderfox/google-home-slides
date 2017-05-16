@@ -1,0 +1,14 @@
+[background-image="framed-background-left-bottom.png"]
+== Grails Scaffolding Plugin
+
+Scaffolding plugin for Grails 3. Replicates much of the functionality from Grails 2, but uses the fields plugin instead.
+
+https://github.com/grails3-plugins/scaffolding
+
+[.fragment]
+* Part of the standard `web` profile.
+
+[background-image="framed-background-home-to-grails.png"]
+=== Grails Scaffolding Plugin
+Demo
+

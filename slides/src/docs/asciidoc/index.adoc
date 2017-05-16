@@ -1,0 +1,77 @@
+= Getting Groovy with Google Home
+Ryan Vanderwerf <vanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com
+2015-05-15
+:source-highlighter: highlightjs
+:revnumber: {project-version}
+:example-caption!:
+:icons: font
+:iconfont-cdn: //use.fontawesome.com/d49392aa93.css
+
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+ifndef::demo[:demo: ../../../../demo/fields-demo]
+
+[.noborder]
+image::tour-de-plugin.png[scaledwidth=65%]
+
+Putting on the Yellow Jersey of Grails
+
+include::subdir/_whoami.adoc[]
+
+include::subdir/_oci.adoc[]
+
+
+[background-image="framed-background-left-bottom.png"]
+== Session Agenda (1/2)
+
+[%step]
+* Why plugins
+* A basic application
+* First leg of the tour:
+[%step]
+** Already installed plugins
+
+=== Session Agenda (2/2)
+[%step]
+* Hitting the mountains:
+[%step]
+** 14 plugins (one Gradle)
+[%step]op
+* Mostly demo!
+* Q/A
+
+=== This talk is not
+
+- about writing your own plugins
+
+include::subdir/_intro.adoc[]
+
+[background-image="framed-background-home-to-grails.png"]
+== Let's look at some plugins
+
+Source on GitHub
+
+icon:github[] https://github.com/sbglasius/g3-tour-de-plugin-demo
+
+include::subdir/_plugin_dbconsole.adoc[]
+include::subdir/_plugin_scaffolding.adoc[]
+include::subdir/_plugin_fields.adoc[]
+include::subdir/_plugin_asset-pipeline.adoc[]
+include::subdir/_plugin_client-dependencies.adoc[]
+include::subdir/_plugin_less-asset-pipeline.adoc[]
+include::subdir/_plugin_external-config.adoc[]
+include::subdir/_plugin_mail.adoc[]
+include::subdir/_plugin_green-mail.adoc[]
+include::subdir/_plugin_sendgrid.adoc[]
+include::subdir/_plugin_i18n.adoc[]
+include::subdir/_plugin_console.adoc[]
+include::subdir/_plugin_schwartz.adoc[]
+include::subdir/_plugin_springsecurity.adoc[]
+
+include::subdir/_summary.adoc[]
+
+include::subdir/_qa.adoc[]
+
+include::subdir/_thankyou.adoc[]
+
+
