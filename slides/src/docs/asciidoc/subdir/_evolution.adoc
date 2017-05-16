@@ -1,11 +1,59 @@
-== Agenda
+== Evolution of UI
+A little history...
+
+=== Character based interfaces
+
+image::greenscreen.png[]
+
+=== Character based interfaces
 
 [%step]
-* What is Google Home
-* Evolution of UI to Voice
-* Actions
-* Building Actions in Grails
-* Demo
-* Building Actions with API.AI
-* Demo
+* 70s
+* Green screens
+* Readability issues
+* Mapping characters for input
+* Lots of abbreviations and codes
+[%step]
+
+=== Graphical based interfaces
+
+image::fig10.big.jpg[scaledheight=70%]
+
+=== Graphical User interfaces
+
+[%step]
+* 80s
+* Much more powerful
+* heavy weight
+* started leveraging metaphors
+* coded for intiutive user actions
+* fit ALOT more data on the screen
+[%step]
+
+=== Web interfaces
+
+image::mosaic_6beta-4e90709-intro.jpg[]
+
+=== Web interfaces
+
+[%step]
+* 90s
+* Changed the way we organize information
+* mapped actions by number of clicks
+[%step]
+
+=== Mobile interfaces
+
+[%step]
+* 2000s
+* discovered more information visible isn't necessarily better
+* introduced gestures
+[%step]
+
+=== Voice interfaces
+
+[%step]
+* nowadays
+* speaking patterns are complex
+* Many ways of saying the same thing
 [%step]

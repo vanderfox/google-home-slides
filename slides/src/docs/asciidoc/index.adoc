@@ -18,8 +18,6 @@ Getting Groovy With Google Home
 include::subdir/_vanderwerf.adoc[]
 include::subdir/_fox.adoc[]
 
-== Agenda
-
 include::subdir/_agenda.adoc[]
 
 include::subdir/_googlehome.adoc[]
@@ -27,6 +25,8 @@ include::subdir/_googlehome.adoc[]
 include::subdir/_evolution.adoc[]
 
 include::subdir/_summary.adoc[]
+
+include::subdir/_sources.adoc[]
 
 include::subdir/_qa.adoc[]
 

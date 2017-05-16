@@ -1,11 +1,7 @@
-== Agenda
+== Google Home
 
 [%step]
-* What is Google Home
-* Evolution of UI to Voice
-* Actions
-* Building Actions in Grails
-* Demo
-* Building Actions with API.AI
-* Demo
+* Google's smart speaker
+* Released:  US 11/2016, UK 04/2017
+* Leverages Google Assistant
 [%step]

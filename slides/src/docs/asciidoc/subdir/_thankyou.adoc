@@ -1,7 +1,10 @@
 === Thank You.
 
 [.fa]
-* icon:user[] Søren Berg Glasius
-* icon:envelope[] soeren@glasius.dk
-* icon:twitter[] http://twitter.com/sbglasius
-* icon:github[] http://github.com/sbglasius
+* icon:github[] http://github.com/vanderfox
+* icon:user[] Ryan Vanderwerf
+* icon:envelope[] rvanderwerf@gmail.com
+* icon:twitter[] http://twitter.com/ryanvanderwerf
+* icon:user[] Lee Fox
+* icon:envelope[] lee.h.fox@gmail.com
+* icon:twitter[] http://twitter.com/foxinatx
