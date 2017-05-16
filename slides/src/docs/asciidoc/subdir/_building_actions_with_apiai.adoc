@@ -1,4 +1,4 @@
-__== API.AI Demo
+== API.AI Demo
 
 == Grails API.AI Plugin
 
@@ -6,4 +6,3 @@ __== API.AI Demo
 
 == Webhooks with Grails
 
-__
