@@ -22,7 +22,9 @@ include::subdir/_fox.adoc[]
 
 include::subdir/_agenda.adoc[]
 
-include::subdir/_intro.adoc[]
+include::subdir/_googlehome.adoc[]
+
+include::subdir/_evolution.adoc[]
 
 include::subdir/_summary.adoc[]
 
