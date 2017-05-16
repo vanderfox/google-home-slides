@@ -16,16 +16,10 @@ image::google_home.jpg[scaledwidth=30%]
 Getting Groovy With Google Home
 
 include::subdir/_vanderwerf.adoc[]
+
 include::subdir/_fox.adoc[]
 
-== Agenda
-
-[%step]
-* Why plugins
-* A basic application
-* First leg of the tour:
-[%step]
-** Already installed plugins
+include::subdir/_agenda.adoc[]
 
 include::subdir/_intro.adoc[]
 

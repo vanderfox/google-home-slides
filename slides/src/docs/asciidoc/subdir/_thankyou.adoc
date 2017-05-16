@@ -1,7 +1,3 @@
-[background-image="takeabow.gif",background-size="cover"]
-== Thank You.
-
-[background-image="framed-background-home-to-grails.png"]
 === Thank You.
 
 [.fa]

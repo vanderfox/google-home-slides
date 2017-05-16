@@ -1,0 +1,8 @@
+== Agenda
+
+[%step]
+* Why plugins
+* A basic application
+* First leg of the tour:
+[%step]
+** Already installed plugins

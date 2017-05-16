@@ -1,4 +1,3 @@
-[background-image="framed-background-home-to-grails.png"]
 == Questions
 [.fragment]
 and answers?
