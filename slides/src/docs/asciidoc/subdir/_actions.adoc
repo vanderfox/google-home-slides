@@ -1,0 +1,91 @@
+== Actions
+
+=== What are Actions?
+
+"`Actions on Google let you build for the Google Assistant. Your integrations can help you engage users through Google Home today, and in the future, through Pixel, Allo, and many other experiences where the Google Assistant will be available.`" - Google
+
+=== What is Google Assistant?
+"`Google Assistant is an intelligent personal assistant developed by Google and announced at Google I/O in May 2016. Unlike Google Now, Google Assistant can engage in two-way conversations. Assistant initially debuted as part of Google's messaging app Allo, and its voice-activated speaker Google Home.`" - Wikipedia
+
+=== Actions Flow
+
+image::conversation-action.png[scaledwidth=30%]
+
+=== Action
+
+Action is the block you declare for a particular conversion to happen. This includes:
+
+* An initial default action or 'Greeting'
+* Responses or queries to follow the default action intent (Invocation Trigger)
+* Query Patterns for it to understand responses that route to intents
+
+=== Invocation Trigger
+
+These are the sections of conversation within an action. Let's look how it breaks down the grammar:
+
+image::invocation-discovery-grammar.png[scaledwidth=30%]
+
+* We don't need to worry about trigger phrase - that's built in
+* Invocation name: This is set in the google console
+* Preposition - jumps to an intent which you name in the JSON file
+* Initial trigger - this defines what will be processed first (welcome)
+
+=== Intents
+
+* Each one given a unique name for a function
+* If you stack them in the same code, you can use this to separate code branches
+
+
+=== Query Patterns
+
+* These are the sample phrases used to train the google to know to invoke your intents
+* Similar to sample utterances on Alexa
+* Can embed parameters that will be separated into arrays when processing in code
+
+
+=== HTTP Executions
+
+* Specify the URL actions will call to fulfill the request
+* Must be SSL with valid certificate
+* Exchanges for fulfillment are exchanges of JSON
+
+=== Tools we need to use
+
+* gactions - system specific binary to deploy actions found at http://developers.google.com/actions/tools/gactions-cli[gactions CLI]
+* Google Console
+* A place to deploy your Grails application (Google App Engine, Beanstalk, Standlone etc)
+
+=== gactions CLI
+
+[%step]
+* 'gactions init' will create a new project and setup credentials - use '--force' to skip action.json creation
+* System specific - supports Windows, Mac and Linux
+* Preview with 'gactions preview --action_package mypackage.json --invocation_name "rhyme finder"'
+* Test with 'gactions simulate' to test action - add '--debug' for more verbose output
+* Also supports 'deploy' to deploy and 'list <projectid>' to list versions uploaded
+* add '--verbose' to any comment for more output
+[%step]
+
+=== Google Console
+
+[%step]
+* UI a little goofy - projects are a drop down along the top
+* Demo - show console
+[%step]
+
+=== action.json
+
+[%step]
+* This is the main metadata for your actions
+* Demo - show action.json
+[%step]
+
+=== Actions SDK for Java
+
+[%step]
+* Early port of Node Actions SDK - still under development (Unofficial)
+* Written by Mirosław Stanek available at http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK]
+* Does not support SSML, Conversation context or API.AI integration yet
+* Supports basic interaction you will need
+* Grails demo enables using this inside of Grails 3
+[%step]

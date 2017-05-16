@@ -1,0 +1,18 @@
+== Grails Demo App Demo
+
+== Handlers and Handler Factories
+
+[%step]
+* Main controller handles invocation (AssistantActionController)
+* Handlers located in src/main/groovy
+* Each handler has a factory to handle context and creation
+* Handler has code that handles the intents
+* /src/main/resources contains action.json file
+[%step]
+
+== Handlers and Handler Factories
+
+[%step]
+* Controller has actions for each httpExecution fulfillment intent
+* Create as many controllers as you like or more actions
+[%step]

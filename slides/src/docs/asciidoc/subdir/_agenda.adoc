@@ -4,8 +4,8 @@
 * What is Google Home
 * Evolution of UI to Voice
 * Actions
-* Building Actions in Grails
 * Demo
+* Building Actions in Grails
 * Building Actions with API.AI
 * Demo
 [%step]
