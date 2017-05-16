@@ -29,27 +29,6 @@ include::subdir/_fox.adoc[]
 
 include::subdir/_intro.adoc[]
 
-== Let's look at some plugins
-
-Source on GitHub
-
-icon:github[] https://github.com/sbglasius/g3-tour-de-plugin-demo
-
-include::subdir/_plugin_dbconsole.adoc[]
-include::subdir/_plugin_scaffolding.adoc[]
-include::subdir/_plugin_fields.adoc[]
-include::subdir/_plugin_asset-pipeline.adoc[]
-include::subdir/_plugin_client-dependencies.adoc[]
-include::subdir/_plugin_less-asset-pipeline.adoc[]
-include::subdir/_plugin_external-config.adoc[]
-include::subdir/_plugin_mail.adoc[]
-include::subdir/_plugin_green-mail.adoc[]
-include::subdir/_plugin_sendgrid.adoc[]
-include::subdir/_plugin_i18n.adoc[]
-include::subdir/_plugin_console.adoc[]
-include::subdir/_plugin_schwartz.adoc[]
-include::subdir/_plugin_springsecurity.adoc[]
-
 include::subdir/_summary.adoc[]
 
 include::subdir/_qa.adoc[]
