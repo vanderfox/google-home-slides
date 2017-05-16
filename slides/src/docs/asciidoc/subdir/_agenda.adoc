@@ -1,8 +1,12 @@
 == Agenda
 
 [%step]
-* Why plugins
-* A basic application
-* First leg of the tour:
+* What is Google Home
+* Evolution of UI to Void
+* Actions
+* Building Actions in Grails
+* Demo
+* Building Actions with API.AI
+* Demo
 [%step]
 ** Already installed plugins

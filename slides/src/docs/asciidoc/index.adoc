@@ -16,8 +16,9 @@ image::google_home.jpg[scaledwidth=30%]
 Getting Groovy With Google Home
 
 include::subdir/_vanderwerf.adoc[]
-
 include::subdir/_fox.adoc[]
+
+== Agenda
 
 include::subdir/_agenda.adoc[]
 
