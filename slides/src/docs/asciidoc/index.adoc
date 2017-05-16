@@ -12,16 +12,15 @@ ifndef::sourcedir[:sourcedir: ../java]
 ifndef::demo[:demo: ../../../../demo/fields-demo]
 
 [.noborder]
-image::tour-de-plugin.png[scaledwidth=65%]
+image::google_home.jpg[scaledwidth=30%]
 
-Putting on the Yellow Jersey of Grails
+Getting Groovy With Google Home
 
 include::subdir/_whoami.adoc[]
 
 include::subdir/_oci.adoc[]
 
 
-[background-image="framed-background-left-bottom.png"]
 == Session Agenda (1/2)
 
 [%step]
@@ -46,7 +45,7 @@ include::subdir/_oci.adoc[]
 
 include::subdir/_intro.adoc[]
 
-[background-image="framed-background-home-to-grails.png"]
+
 == Let's look at some plugins
 
 Source on GitHub
