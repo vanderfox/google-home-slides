@@ -9,4 +9,3 @@
 * Building Actions with API.AI
 * Demo
 [%step]
-** Already installed plugins
