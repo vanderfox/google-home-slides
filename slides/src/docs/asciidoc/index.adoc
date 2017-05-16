@@ -11,7 +11,7 @@ ifndef::sourcedir[:sourcedir: ../java]
 ifndef::demo[:demo: ../../../../demo/fields-demo]
 
 [.noborder]
-<<<<<<< HEAD
+
 image::google_home.jpg[scaledwidth=30%]
 
 Getting Groovy With Google Home
