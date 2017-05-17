@@ -16,6 +16,9 @@ Steps to build:
 * Add plugin to build.gradle
 * Add property 'apiAiKey' for your project to application.groovy or application.yml
 * Create a controller that implements the trait AiServiceController
+
+=== Data Services with Grails
+
 * In the index action, implement the 3 lines from the example controller 'AiDataController'
 * Do something with the response like converse with a query - you can proxy the interaction if you wish
 
@@ -32,7 +35,7 @@ Steps to build:
 * Remove any index() action - the trait implements this for us
 * Add a @Override method called doWebhook(AIWebhookServlet.AIWebhookRequest input, Fulfillment output)
 
-=== Webhooks with Grails Continued
+=== Webhooks with Grails
 
 * Create a project on API.AI
 * Create an intent action with just about any parameter
