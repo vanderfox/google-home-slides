@@ -6,10 +6,27 @@
 * Leverages Google Assistant
 [%step]
 
-== Features
+=== Features
 
 [%step]
 * Far field technology
 * Voice identification
+* Integration with Google services
+[%step]
+
+=== Google Assistant
+
+[%step]
+* Work with your calendar
+* Look up information like exchange rates
+* Translate
+* Music
+* Fun Easter Eggs
+[%step]
+** What am I thinking?
+** Make me a sandwich
+** What does the fox say?
+** Rap
+[%step]
 [%step]
 
