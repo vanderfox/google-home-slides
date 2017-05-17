@@ -25,6 +25,8 @@ These are the sections of conversation within an action. Let's look how it break
 
 image::invocation-discovery-grammar.png[scaledwidth=30%]
 
+=== Invocation Trigger Continued
+
 * We don't need to worry about trigger phrase - that's built in
 * Invocation name: This is set in the google console
 * Preposition - jumps to an intent which you name in the JSON file
@@ -61,6 +63,11 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 * 'gactions init' will create a new project and setup credentials - use '--force' to skip action.json creation
 * System specific - supports Windows, Mac and Linux
 * Preview with 'gactions preview --action_package mypackage.json --invocation_name "rhyme finder"'
+[%step]
+
+=== gactions CLI Continued
+
+[%step]
 * Test with 'gactions simulate' to test action - add '--debug' for more verbose output
 * Also supports 'deploy' to deploy and 'list <projectid>' to list versions uploaded
 * add '--verbose' to any comment for more output
