@@ -1,4 +1,4 @@
-== Grails Demo App Demo
+== Grails Actions App Demo
 
 === Handlers and Handler Factories
 
