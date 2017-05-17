@@ -1,6 +1,6 @@
 == Grails Demo App Demo
 
-== Handlers and Handler Factories
+=== Handlers and Handler Factories
 
 [%step]
 * Main controller handles invocation (AssistantActionController)
@@ -10,7 +10,7 @@
 * /src/main/resources contains action.json file
 [%step]
 
-== Handlers and Handler Factories
+=== Handlers and Handler Factories
 
 [%step]
 * Controller has actions for each httpExecution fulfillment intent

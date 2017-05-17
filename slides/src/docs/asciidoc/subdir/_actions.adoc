@@ -84,7 +84,7 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 
 [%step]
 * Early port of Node Actions SDK - still under development (Unofficial)
-* Written by Mirosław Stanek available at http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK]
+* Written by Mirosław Stanek available at http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK] on Github
 * Does not support SSML, Conversation context or API.AI integration yet
 * Supports basic interaction you will need
 * Grails demo enables using this inside of Grails 3

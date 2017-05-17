@@ -1,8 +1,43 @@
 == API.AI Demo
 
-== Grails API.AI Plugin
+=== Grails API.AI Plugin
 
-== Data Services with Grails
+Does 2 things:
 
-== Webhooks with Grails
+* uses data services, which calls a working api.ai skill with a query and returns results
+* uses webhook fulfillment - can fulfill an intent, slot, or domain
+
+=== Data Services with Grails
+
+You can call a working action on API.AI with a query and return a result.
+
+Steps to build:
+
+* Add plugin to build.gradle
+* Add property 'apiAiKey' for your project to application.groovy or application.yml
+* Create a controller that implements the trait AiServiceController
+* In the index action, implement the 3 lines from the example controller 'AiDataController'
+* Do something with the response like converse with a query - you can proxy the interaction if you wish
+
+=== Webhooks with Grails
+
+API.AI allows you to build in GUI based project and interacts with itself, or call an outside service to fulfill and intent.
+
+Steps to build:
+
+
+* Add plugin to build.gradle
+* Add property 'apiAiKey' for your project to application.groovy or application.yml
+* Create a controller that implements the trait AiWebhookController
+* Remove any index() action - the trait implements this for us
+* Add a @Override method called doWebhook(AIWebhookServlet.AIWebhookRequest input, Fulfillment output)
+
+=== Webhooks with Grails Continued
+
+* Create a project on API.AI
+* Create an intent action with just about any parameter
+* Click on fulfillment - enter the https url of your webhook controller index action
+* Under domains select 'enable for all domains'
+* Go back to API.AI console and activate intent via "Try it out"
+
 

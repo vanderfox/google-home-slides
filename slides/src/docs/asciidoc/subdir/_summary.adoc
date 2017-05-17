@@ -1,17 +1,18 @@
 == Summary
-What plugins gives you:
+Building Actions in Grails for Google Home has two approaches:
 [%step]
-* Lots of already coded functionality
-* Often well tested code
-* Large supporting community
-* Great way to structure your code
+* Unofficial Java SDK
+* API.AI Data Services and/or Webhooks
+* Java SDK effort ongoing - currently missing SSML and Context
+* You can build simple actions/conversations for the time being
+* This is a new type of UI construct here to stay
 
 === What can you do
 [%step]
-* Provide feedback to plugin authors
+* Test Grails plugin
+* Submit PR's to Java SDK (Documentation or code!)
+* Submit PR's to Grails Plugin (Documentation or code!)
 [%step]
 ** Feature requests
 ** Bug reports
 ** Thanks and gratitude!
-[%step]
-* Write and submit your own plugins!
