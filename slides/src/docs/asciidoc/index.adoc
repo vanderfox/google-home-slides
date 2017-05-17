@@ -15,6 +15,8 @@ image::google_home.jpg[scaledwidth=30%]
 
 Getting Groovy With Google Home
 
+GR8Conf EU 2017
+
 include::subdir/_vanderwerf.adoc[]
 include::subdir/_fox.adoc[]
 

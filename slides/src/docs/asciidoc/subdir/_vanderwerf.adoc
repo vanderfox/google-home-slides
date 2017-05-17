@@ -1,9 +1,10 @@
 == `Ryan Vanderwerf`
 
 [%step]
-* Java developer since y2k
-* Groovy & Grails developer since y2k+9
-* OCI Grails Team Member
-* GR8Conf co-founder and organizer
-* Nerd By Nature
+* Software Engineer on Grails team at OCI (Home to Grails)
+* Father of 2 kiddos under 12
+* Co-Chair Austin Groovy and Grails User Group
+* Co-Author of Effective Gradle Implementation Video Series on Packt
+* I like to modify all the things (cars, home automation, phones, gadgets)
+* OCI - If you need Grails or Groovy support we can help!
 
