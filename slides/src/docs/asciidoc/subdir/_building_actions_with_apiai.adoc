@@ -2,10 +2,10 @@
 
 === Grails API.AI Plugin
 
-Does 2 things:
+Does two things:
 
-* uses data services, which calls a working api.ai skill with a query and returns results
-* uses webhook fulfillment - can fulfill an intent, slot, or domain
+* Uses data services, which calls a working api.ai skill with a query and returns results
+* Uses webhook fulfillment - can fulfill an intent, slot, or domain
 
 === Data Services with Grails
 
