@@ -73,10 +73,20 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 * add '--verbose' to any comment for more output
 [%step]
 
+=== gactions CLI - update new console
+[%step]
+* When you use the new console, and select Action SDK it will ask to run gactions update
+* We push the actionv2.json to google for example:
+* gactions update --action_package actionv2.json --project color-finder-167203
+* Now we can see edit the details in the console
+[%step]
+
 === Google Console
 
 [%step]
 * UI a little goofy - projects are a drop down along the top
+* Updated as May 17 - uses new json format for actions
+* Can import old project but need to re-build json in new format
 * Demo - show console
 [%step]
 
@@ -84,7 +94,7 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 
 [%step]
 * This is the main metadata for your actions
-* Demo - show action.json
+* Demo - show action.json and actionv2.json
 [%step]
 
 === Actions SDK for Java

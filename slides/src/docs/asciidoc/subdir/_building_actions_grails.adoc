@@ -7,7 +7,7 @@
 * Handlers located in src/main/groovy
 * Each handler has a factory to handle context and creation
 * Handler has code that handles the intents
-* /src/main/resources contains action.json file
+* /src/main/resources contains action.json and actionv2.json file
 [%step]
 
 === Handlers and Handler Factories
