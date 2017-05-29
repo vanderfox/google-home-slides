@@ -55,20 +55,26 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 
 * gactions - system specific binary to deploy actions found at http://developers.google.com/actions/tools/gactions-cli[gactions CLI]
 * Google Console
-* A place to deploy your Grails application (Google App Engine, Beanstalk, Standlone etc)
 
 === gactions CLI
 
-[%step]
+
 * 'gactions init' will create a new project and setup credentials - use '--force' to skip action.json creation
 * System specific - supports Windows, Mac and Linux
-* Preview with 'gactions preview --action_package mypackage.json --invocation_name "rhyme finder"'
-[%step]
+* Preview with:
+
+[source,bash]
+----
+'gactions preview --action_package mypackage.json --invocation_name "rhyme finder"'
+----
+
+
 
 === gactions CLI Continued
 
 [%step]
-* Test with 'gactions simulate' to test action - add '--debug' for more verbose output
+* Test with 'gactions simulate' to test action - add
+'--debug' for more verbose output
 * Also supports 'deploy' to deploy and 'list <projectid>' to list versions uploaded
 * add '--verbose' to any comment for more output
 [%step]
@@ -77,7 +83,12 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 [%step]
 * When you use the new console, and select Action SDK it will ask to run gactions update
 * We push the actionv2.json to google for example:
-* gactions update --action_package actionv2.json --project color-finder-167203
+
+[source,bash]
+----
+gactions update --action_package actionv2.json --project color-finder-167203
+----
+
 * Now we can see edit the details in the console
 [%step]
 

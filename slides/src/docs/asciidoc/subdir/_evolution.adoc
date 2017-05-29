@@ -26,8 +26,8 @@ image::fig10.big.jpg[scaledheight=70%]
 * Much more powerful
 * Heavy weight
 * Started leveraging metaphors
-* Coded for intiutive user actions
-* Fit ALOT more data on the screen
+* Coded for intuitive user actions
+* Fit A LOT more data on the screen
 [%step]
 
 === Web interfaces
