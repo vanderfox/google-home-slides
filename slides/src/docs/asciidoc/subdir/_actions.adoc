@@ -61,12 +61,7 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 
 * 'gactions init' will create a new project and setup credentials - use '--force' to skip action.json creation
 * System specific - supports Windows, Mac and Linux
-* Preview with:
 
-[source,bash]
-----
-'gactions preview --action_package mypackage.json --invocation_name "rhyme finder"'
-----
 
 
 
@@ -83,14 +78,25 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 [%step]
 * When you use the new console, and select Action SDK it will ask to run gactions update
 * We push the actionv2.json to google for example:
-
+* You now must fill out all required fields before you can test/preview
+[%step]
+[%step]
 [source,bash]
 ----
 gactions update --action_package actionv2.json --project color-finder-167203
 ----
-
+[%step]
+[%step]
 * Now we can see edit the details in the console
 [%step]
+
+== gactions preview / test
+* Preview with (recently gactions removed preview with 'test':
+
+[source,bash]
+----
+'gactions test --action_package mypackage.json --preview_mins 120'
+----
 
 === Google Console
 
@@ -113,7 +119,8 @@ gactions update --action_package actionv2.json --project color-finder-167203
 [%step]
 * Early port of Node Actions SDK - still under development (Unofficial)
 * Written by Mirosław Stanek available at http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK] on Github
-* Does not support SSML, Conversation context or API.AI integration yet
+* Does not support SSML or API.AI integration yet
+* Conversation context must be backed by a data store like DynamoDB
 * Supports basic interaction you will need
 * Grails demo enables using this inside of Grails 3
 [%step]
