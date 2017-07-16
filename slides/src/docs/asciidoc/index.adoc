@@ -1,5 +1,5 @@
 = Getting Groovy with Google Home
-Ryan Vanderwerf <vanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com>
+Ryan Vanderwerf <rvanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com>
 :source-highlighter: highlightjs
 :revnumber: {project-version}
 :example-caption!:
