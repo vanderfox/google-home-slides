@@ -68,7 +68,7 @@ image::invocation-discovery-grammar.png[scaledwidth=30%]
 === gactions CLI Continued
 
 [%step]
-* Test with 'gactions simulate' to test action - add
+* Test with 'gactions preview' to test action package - add
 '--debug' for more verbose output
 * Also supports 'deploy' to deploy and 'list <projectid>' to list versions uploaded
 * add '--verbose' to any comment for more output
@@ -122,5 +122,5 @@ gactions update --action_package actionv2.json --project color-finder-167203
 * Does not support SSML or API.AI integration yet
 * Conversation context must be backed by a data store like DynamoDB
 * Supports basic interaction you will need
-* Grails demo enables using this inside of Grails 3
+* Star Wars Quiz - Grails demo enables using this inside of Grails 3
 [%step]

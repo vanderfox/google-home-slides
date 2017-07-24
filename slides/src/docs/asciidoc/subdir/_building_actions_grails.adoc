@@ -1,4 +1,4 @@
-== Grails Actions App Demo
+== Grails Actions App Demo - Color Finder & Star Wars Quiz
 
 === Handlers and Handler Factories
 
