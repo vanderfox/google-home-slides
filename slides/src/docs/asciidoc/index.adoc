@@ -1,5 +1,5 @@
-= Getting Groovy with Google Home
-Ryan Vanderwerf <rvanderwerf@gmail.com> and Lee Fox <lee.h.fox@gmail.com>
+= Building Grails Apps for Google Cloud
+Ryan Vanderwerf <rvanderwerf@gmail.com>
 :source-highlighter: highlightjs
 :revnumber: {project-version}
 :example-caption!:
@@ -13,9 +13,9 @@ ifndef::demo[:demo: ../../../../demo/fields-demo]
 [.noborder]
 image::google_home.jpg[scaledwidth=30%]
 
-Getting Groovy With Google Home
+Building Grails Apps for Google Cloud
 
-G3Summit 2017
+GREACH 2018
 
 
 [.reveal h1 { font-size: 2.5em; }]
