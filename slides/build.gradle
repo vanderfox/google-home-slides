@@ -102,7 +102,7 @@ asciidoctor {
             'revealjs_history': 'true',
             'revealjs_slideNumber': 'true',
             'background-size': 'contain',
-            'background-image':'inforOciLogo.png',
+            'background-image':'ociLogo.png',
             'github':'abc'
     options template_dirs: [new File(templateDir, 'templates/slim').absolutePath], github: [username: project.githubUsername,password: project.githubPassword]
 

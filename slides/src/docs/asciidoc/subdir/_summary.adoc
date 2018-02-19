@@ -2,7 +2,7 @@
 Building Actions in Grails for Google Home has two approaches:
 [%step]
 * Unofficial Java SDK
-* API.AI Data Services and/or Webhooks
+* DialogFlow Data Services and/or Webhooks
 * Java SDK effort ongoing - currently missing SSML and Context
 * You can build simple actions/conversations for the time being
 * This is a new type of UI construct here to stay

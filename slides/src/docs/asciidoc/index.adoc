@@ -15,13 +15,17 @@ image::google_home.jpg[scaledwidth=30%]
 
 Getting Groovy With Google Home
 
-GR8Conf US 2017
+G3Summit 2017
 
 
 [.reveal h1 { font-size: 2.5em; }]
 
 include::subdir/_vanderwerf.adoc[]
+
+////
 include::subdir/_fox.adoc[]
+////
+
 
 include::subdir/_agenda.adoc[]
 

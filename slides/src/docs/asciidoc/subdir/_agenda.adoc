@@ -6,6 +6,6 @@
 * Actions
 * Demo
 * Building Actions in Grails
-* Building Actions with API.AI
+* Building Actions with DialogFlow
 * Demo
 [%step]

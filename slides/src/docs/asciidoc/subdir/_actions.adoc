@@ -119,7 +119,7 @@ gactions update --action_package actionv2.json --project color-finder-167203
 [%step]
 * Early port of Node Actions SDK - still under development (Unofficial)
 * Written by Mirosław Stanek available at http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK] on Github
-* Does not support SSML or API.AI integration yet
+* Does not support SSML or DialogFlow integration yet
 * Conversation context must be backed by a data store like DynamoDB
 * Supports basic interaction you will need
 * Star Wars Quiz - Grails demo enables using this inside of Grails 3

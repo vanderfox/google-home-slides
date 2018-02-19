@@ -1,15 +1,15 @@
-== API.AI Demo
+== DialogFlow Demo
 
-=== Grails API.AI Plugin
+=== Grails DialogFlow Plugin
 
 Does two things:
 
-* Uses data services, which calls a working api.ai skill with a query and returns results
+* Uses data services, which calls a working DialogFlow skill with a query and returns results
 * Uses webhook fulfillment - can fulfill an intent, slot, or domain
 
 === Data Services with Grails
 
-You can call a working action on API.AI with a query and return a result.
+You can call a working action on DialogFlow with a query and return a result.
 
 Steps to build:
 
@@ -24,7 +24,7 @@ Steps to build:
 
 === Webhooks with Grails
 
-API.AI allows you to build in GUI based project and interacts with itself, or call an outside service to fulfill and intent.
+DialogFlow allows you to build in GUI based project and interacts with itself, or call an outside service to fulfill and intent.
 
 Steps to build:
 
@@ -37,10 +37,10 @@ Steps to build:
 
 === Webhooks with Grails
 
-* Create a project on API.AI
+* Create a project on DialogFlow
 * Create an intent action with just about any parameter
 * Click on fulfillment - enter the https url of your webhook controller index action
 * Under domains select 'enable for all domains'
-* Go back to API.AI console and activate intent via "Try it out"
+* Go back to DialogFlow console and activate intent via "Try it out"
 * Demo - Yahoo Weather Webhook
 

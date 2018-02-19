@@ -2,7 +2,7 @@
 
 [%step]
 * Software Engineer on Grails team at OCI (Home to Grails)
-* Father of 2 kiddos under 12
+* Father of 2 kiddos under 13
 * Co-Chair Austin Groovy and Grails User Group
 * Co-Author of Effective Gradle Implementation Video Series on Packt
 * OCI - If you need Grails or Groovy support we can help

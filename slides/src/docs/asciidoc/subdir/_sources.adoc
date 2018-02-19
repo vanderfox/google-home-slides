@@ -3,5 +3,6 @@
 * https://madeby.google.com/home/
 * https://www.slideshare.net/rajeshlal/evolution-of-user-interface-26414802
 * http://https://github.com/frogermcs/Google-Actions-Java-SDK[Unofficial Java SDK] on Github
-* Grails Plugin for API.AI https://github.com/vanderfox/grails-api-ai
-* Grails Actions Demo https://github.com/vanderfox/grails-google-actions-demo
+* Grails Plugin for DialogFlow https://github.com/vanderfox/grails-api-ai
+* Grails Actions Demo https://github.com/vanderfox/grails-google-actions-demo (Star Wars, ColorFinder, DialogFlow Webhooks)
+* Slack channel for Google Home http://googleslack.com/
